@@ -3,3 +3,4 @@ Praktická časť bakalárskej práce - Vytvorenie webovej stránky na pomoc s v
 
 Samuel Michalčík
 FEI STU - API
+2023/2024
