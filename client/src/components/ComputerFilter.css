@@ -1,0 +1,245 @@
+/************************************
+*                                   *
+*    --global-creamy: #fff5d1;      *
+*    --global-blue-grey: #10222e;   *
+*    --global-orange: #f55138;      *
+*    --global-succes: #32CD32;      *
+*    --global-alert: #C81E1E;       *
+*                                   *
+*************************************/
+
+#computer-filter {
+  position: sticky;
+  top: 16vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: stretch;
+  row-gap: 5vh;
+  
+  width: 260px;
+  min-height: 45vh;
+  max-height: 84vh;
+  padding: 25px;
+
+  background-color: var(--global-orange);
+  color: var(--global-creamy);
+
+  transition-duration: 600ms;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  z-index: 3;
+}
+
+#filter-hide-btn {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+
+  display: none;
+
+  width: fit-content;
+  height: fit-content;
+  margin: 0;
+  padding: 5px 5px 0 5px;
+  border: none;
+  border-radius: 10px;
+
+  color: var(--global-creamy);
+  background-color: var(--global-blue-grey);
+
+  cursor: pointer;
+}
+
+.filter-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  row-gap: 5px;
+
+  width: 100%;
+}
+
+.filter-block div {
+  padding-left: 10px;
+}
+
+.filter-title {
+  margin-bottom: 10px;
+
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+/* FIELD INPUTS*/
+
+.textfield-label {
+  display: inline-block;
+
+  width: 40px;
+  margin: 0;
+  padding: 0;
+
+  text-align: left;
+}
+
+.input-field {
+  width: 155px;
+  height: 30px;
+  padding-left: 10px;
+  border: none;
+  border-radius: 10px;
+  outline: 0;
+}
+
+.input-field:focus {
+  border: 2px solid var(--global-blue-grey);
+}
+
+/* RADIO INPUTS*/
+
+.radio-container {
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 195px;
+  height: 50px;
+  margin-left: 10px;
+  border-radius: 10px;
+
+  color: var(--global-blue-grey);
+  background-color: white;
+}
+
+.radio-container:has(.input-radio:checked) {
+  color: white;
+  background-color: var(--global-success);
+}
+
+.input-radio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+
+  width: 195px;
+  height: 50px;
+  border-radius: 10px;
+
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-label {
+  margin-left: 10px;
+  text-align: left;
+}
+
+/* CHECK INPUTS*/
+
+.input-checkbox {
+  position: relative;
+
+  width: 30px;
+  height: 15px;
+  border-radius: 15px;
+
+  background-color: var(--global-blue-grey);
+  transition: 600ms;
+  -webkit-appearance: none;
+}
+
+.input-checkbox:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+
+  background-color: white;
+  content: "";
+  scale: 1.1;
+  transition: 600ms;
+}
+
+.input-checkbox:checked {
+  background-color: var(--global-success);
+}
+
+.input-checkbox:checked:before {
+  top: 0;
+  left: 15px;
+}
+
+.input-checkbox:disabled {
+  cursor: default;
+  background-color: rgba(239, 239, 239, 0.3) !important;
+}
+
+.input-checkbox:disabled:before{
+  cursor: default;
+  background-color: rgb(84, 84, 84) !important;
+}
+
+.input-checkbox:disabled + .check-label {
+  color: rgb(84, 84, 84) !important;
+}
+
+.check-label {
+  margin-left: 15px;
+}
+
+/* SCROLL TO TOP BTN */
+#scroll-top-filter-btn {
+  position: fixed;
+  bottom: 10px;
+  right: 15px;
+
+  display: none;
+
+  width: fit-content;
+  height: fit-content;
+  margin: 0;
+  padding: 10px 10px 5px 10px;
+  border: none;
+  border-radius: 10px;
+
+  color: var(--global-creamy);
+  background-color: var(--global-success);
+
+  cursor: pointer;
+}
+
+#scroll-top-filter-btn:hover {
+  scale: 1.1;
+  transition: 600ms;
+}
+
+@media screen and (max-width: 640px) {
+  #computer-filter {
+    position: fixed;
+    top: 16vh;
+    bottom: 0;
+    right: 0;
+  }
+
+  .computer-filter-closed {
+    transform: translateX(100%);
+  }
+
+  #filter-hide-btn {
+    display: block;
+  }
+
+  #scroll-top-filter-btn {
+    display: block;
+  }
+}

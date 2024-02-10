@@ -1,0 +1,15 @@
+/************************************
+*                                   *
+*    --global-creamy: #fff5d1;      *
+*    --global-blue-grey: #10222e;   *
+*    --global-orange: #f55138;      *
+*    --global-succes: #32CD32;      *
+*    --global-alert: #C81E1E;       *
+*                                   *
+*************************************/
+
+#page-body-computers {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+}

@@ -1,0 +1,134 @@
+/************************************
+*                                   *
+*    --global-creamy: #fff5d1;      *
+*    --global-blue-grey: #10222e;   *
+*    --global-orange: #f55138;      *
+*    --global-succes: #32CD32;      *
+*    --global-alert: #C81E1E;       *
+*                                   *
+*************************************/
+
+#footer-section {
+  width: 100%;
+  height: 26vh;
+  padding: 4vh 30px;
+
+  background-color: var(--global-blue-grey);
+}
+
+#max-width-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+
+  max-width: 1280px;
+  height: 18vh;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1vh;
+
+  width: 37.5%;
+  padding: 0 20px;
+  border-right: 1px solid var(--global-creamy);
+  border-left: 1px solid var(--global-creamy);
+
+  color: var(--global-creamy);
+  font-size: 22px;
+}
+
+#icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+}
+
+#footer-icon {
+  height: 18vh;
+}
+
+.footer-contact-item {
+  list-style-type: none;
+}
+
+.footer-contact-link {
+  text-decoration: none;
+  color: var(--global-creamy);
+}
+
+.footer-contact-item:hover,
+.footer-contact-item:hover a {
+  scale: 1.1;
+  transition: 600ms;
+  color: var(--global-orange);
+}
+
+#footer-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 5vh;
+
+  background-color: var(--global-creamy);
+  color: var(--global-blue-grey);
+}
+
+@media screen and (max-width: 1280px) {
+  #footer-section {
+    padding: 4vh 2.5%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #footer-section {
+    width: 100%;
+    height: 80vh;
+    margin: 0;
+    padding: 5vh 5%;
+  }
+
+  #max-width-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5vh;
+
+    width: 50%;
+    height: 70vh;
+    margin: 0 auto;
+  }
+
+  .footer-info {
+    width: 100%;
+    height: 20vh;
+    border-right: none;
+    border-left: none;
+
+    border-top: 1px solid var(--global-creamy);
+    border-bottom: 1px solid var(--global-creamy);
+  }
+
+  #icon-container {
+    height: 20vh;
+  }
+
+  #footer-icon {
+    height: 20vh;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #max-width-footer {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
