@@ -173,7 +173,7 @@ export default function DetailComputer() {
                 </span>
               </div>
               <div className="detail-computer-parameter">
-                <span>Grafiská&nbsp;karta:&nbsp;</span>
+                <span>Grafická&nbsp;karta:&nbsp;</span>
                 <span>
                   {computer.graphic_card.manufacturer.toUpperCase()}&nbsp; 
                   {(computer.graphic_card.brand === "intel" || computer.graphic_card.brand === "amd") ? 

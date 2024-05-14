@@ -50,13 +50,13 @@
 
 #prev-arrow {
   position: absolute;
-  top: 55%;
+  top: 40px;
   left: 20px;
 }
 
 #next-arrow {
   position: absolute;
-  top: 55%;
+  top: 40px;
   right: 20px;
 }
 
